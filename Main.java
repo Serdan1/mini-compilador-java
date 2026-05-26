@@ -1,12 +1,29 @@
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        String code = "int x;\n" +
-                "x = 5;\n" +
-                "print(x);";
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Introduce el codigo:");
+        System.out.println("Escribe FIN para terminar");
+
+        StringBuilder builder = new StringBuilder();
+
+        while (true) {
+
+            String line = scanner.nextLine();
+
+            if (line.equalsIgnoreCase("FIN")) {
+                break;
+            }
+
+            builder.append(line).append("\n");
+        }
+
+        String code = builder.toString();
 
         Lexer lexer = new Lexer();
 
