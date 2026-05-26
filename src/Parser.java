@@ -40,6 +40,10 @@ public class Parser {
         consumeType(TokenType.IDENTIFICADOR,
                 "Se esperaba identificador después de int");
 
+        if (match("=")) {
+            expression();
+        }
+
         consume(";", "Falta ';' en declaración");
     }
 
