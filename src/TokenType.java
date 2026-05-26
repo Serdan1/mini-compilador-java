@@ -1,3 +1,8 @@
-public class TokenType {
-
+public enum TokenType {
+    PALABRA_CLAVE,
+    IDENTIFICADOR,
+    LITERAL_NUMERICO,
+    OPERADOR,
+    DELIMITADOR,
+    DESCONOCIDO
 }
