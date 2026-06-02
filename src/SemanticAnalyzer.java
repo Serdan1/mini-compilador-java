@@ -50,7 +50,7 @@ public class SemanticAnalyzer {
             }
         }
 
-        System.out.println("Análisis semántico finalizado");
+        System.out.println("Analisis semantico finalizado");
     }
 
     private boolean previousIsInt(List<Token> tokens, int i) {

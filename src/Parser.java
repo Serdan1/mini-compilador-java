@@ -15,11 +15,11 @@ public class Parser {
                 statement();
             }
 
-            System.out.println("Análisis sintáctico correcto");
+            System.out.println("Analisis sintactico correcto");
             return true;
 
         } catch (RuntimeException e) {
-            System.out.println("Error sintáctico: " + e.getMessage());
+            System.out.println("Error sintactico: " + e.getMessage());
             return false;
         }
     }
@@ -38,13 +38,13 @@ public class Parser {
     private void declaration() {
 
         consumeType(TokenType.IDENTIFICADOR,
-                "Se esperaba identificador después de int");
+                "Se esperaba identificador despues de int");
 
         if (match("=")) {
             expression();
         }
 
-        consume(";", "Falta ';' en declaración");
+        consume(";", "Falta ';' en declaracion");
     }
 
     private void assignment() {
@@ -100,7 +100,7 @@ public class Parser {
 
         if (match("(")) {
             expression();
-            consume(")", "Paréntesis no balanceados");
+            consume(")", "Parentesis no balanceados");
             return;
         }
 
