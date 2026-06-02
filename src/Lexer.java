@@ -25,7 +25,7 @@ public class Lexer {
         for (String part : parts) {
 
             if (part.isEmpty()) {
-                System.out.println("Error léxico: token vacío");
+                System.out.println("Error lexico: token vacio");
                 continue;
             }
 
@@ -40,7 +40,7 @@ public class Lexer {
             } else if (isDelimiter(part)) {
                 tokens.add(new Token(TokenType.DELIMITADOR, part));
             } else {
-                System.out.println("Error léxico: símbolo desconocido -> " + part);
+                System.out.println("Error lexico: simbolo desconocido -> " + part);
                 tokens.add(new Token(TokenType.DESCONOCIDO, part));
             }
         }
